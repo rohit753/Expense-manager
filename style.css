@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-content {
+    display: flex;
+}
+
+#expenses {
+    flex: 2;
+    margin-right: 20px;
+}
+
+#analytics {
+    flex: 1;
+}
+
+.analytics-segment {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form button {
+    margin: 5px 0;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#expenseList {
+    margin-top: 20px;
+}
+
+.expense-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #fff;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode .expense-item {
+    background-color: #555;
+    border-color: #777;
+}
+
+.chart-container {
+    margin-top: 20px;
+}
+
+#filterDate {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+}

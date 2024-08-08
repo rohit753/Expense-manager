@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Expense Tracker</h1>
+            <button id="darkModeToggle">Toggle Dark Mode</button>
+        </header>
+        <div class="main-content">
+            <section id="expenses">
+                <h2>Add Expense</h2>
+                <form id="expenseForm">
+                    <input type="date" id="date" required>
+                    <input type="text" id="category" placeholder="Category" required>
+                    <input type="number" id="amount" placeholder="Amount" required>
+                    <button type="submit">Add Expense</button>
+                </form>
+                <h2>Expenses</h2>
+                <input type="date" id="filterDate" placeholder="Select a date to filter expenses">
+                <div id="expenseList">
+                    <!-- Expense Items will be listed here -->
+                </div>
+            </section>
+            <section id="analytics">
+                <h2>Analytics</h2>
+                <div id="totalSpending" class="analytics-segment">
+                    <h3>Total Spending</h3>
+                    <p>$0.00</p>
+                </div>
+                <div id="spendToday" class="analytics-segment">
+                    <h3>Spend Today</h3>
+                    <p>$0.00</p>
+                </div>
+                <div id="spendSelectedDay" class="analytics-segment">
+                    <h3>Spend on Selected Day</h3>
+                    <p>$0.00</p>
+                </div>
+                <div id="periodicSpending" class="analytics-segment">
+                    <h3>Periodic Spending</h3>
+                    <p>Monthly: $0.00</p>
+                    <p>Half-Yearly: $0.00</p>
+                    <p>Yearly: $0.00</p>
+                </div>
+            </section>
+        </div>
+        <div class="chart-container">
+            <canvas id="expenseChart"></canvas>
+        </div>
+    </div>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
